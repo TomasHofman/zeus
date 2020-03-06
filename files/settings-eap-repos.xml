@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Maven settings file that enables brew repositories for EAP 7.2 and 7.3.
+-->
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <profiles>
+        <profile>
+            <id>eap-brew-repositories</id>
+            <repositories>
+                <repository>
+                    <id>jboss-eap-7.2-brew-repository</id>
+                    <url>https://download.devel.redhat.com/brewroot/repos/jb-eap-7.2-maven-build/latest/maven/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>jboss-eap-7.2-brew-repository</id>
+                    <url>https://download.devel.redhat.com/brewroot/repos/jb-eap-7.3-maven-build/latest/maven/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>eap-brew-repositories</activeProfile>
+    </activeProfiles>
+
+</settings>
